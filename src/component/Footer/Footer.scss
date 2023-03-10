@@ -1,0 +1,28 @@
+footer {
+  background-color: #1b1a17;
+  height: 100%x;
+  display: flex;
+  justify-content: center;
+
+  .footer-container {
+    display: flex;
+    width: 1140px;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 0px 50px 0;
+
+    .footer-info {
+      color: #fff;
+
+      .contact-title {
+        font-size: 16px;
+        text-decoration: underline;
+      }
+      .contact-info {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+}
