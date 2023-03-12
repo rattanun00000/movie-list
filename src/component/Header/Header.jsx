@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
 
 function Header() {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart.list);
   return (
     <nav>
       <div className="nav-container">

@@ -4,14 +4,14 @@ import { deleteCart } from '../../redux/slices/cartSlice';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import './Cart.scss';
 export default function Cart() {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart.list);
   const dispatch = useDispatch();
 
   return (
     <div className="cart">
       <div className="cart-title">My Movie List</div>
       {cart.length === 0 ? (
-        <p className="cartEmpty">Cart is empty...</p>
+        <p className="cartEmpty">List is empty...</p>
       ) : (
         <div className="card-container">
           {cart.map((item) => (

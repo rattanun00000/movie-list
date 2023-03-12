@@ -1,20 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
+const initialState = {
+  list: [],
+};
 
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const item = state.find((item) => item.imdbID === action.payload.imdbID);
+      const item = state.list.find(
+        (item) => item.imdbID === action.payload.imdbID
+      );
 
       if (!item) {
-        state.push(action.payload);
+        state.list.push(action.payload);
+      } else {
+        alert('You already have this movie on your list.');
       }
     },
-    deleteCart: (state, action) =>
-      (state = state.filter((item) => item.imdbID !== action.payload)),
+    deleteCart: (state, action) => {
+      state.list = state.list.filter((item) => item.imdbID !== action.payload);
+    },
   },
 });
 
