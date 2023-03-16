@@ -50,7 +50,9 @@ function MovieDetail() {
           </div>
         </div>
       ) : (
-        <h4 style={{ margin: '1rem 0' }}>Loading...</h4>
+        <div className="loading">
+          Loading...<div class="lds-dual-ring"></div>
+        </div>
       )}
     </div>
   );

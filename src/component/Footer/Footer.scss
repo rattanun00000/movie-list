@@ -3,6 +3,7 @@ footer {
   height: 100%x;
   display: flex;
   justify-content: center;
+  text-decoration: none;
 
   .footer-container {
     display: flex;
@@ -22,6 +23,14 @@ footer {
       .contact-info {
         margin-top: 5px;
         font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        .contact-info-text {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+        }
       }
     }
   }

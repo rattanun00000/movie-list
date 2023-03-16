@@ -3,7 +3,6 @@ import movieApi from '../../api/MovieApi';
 import { APIKey } from '../../api/MovieApiKey';
 import MovieCard from '../MovieCard/MovieCard';
 import './Home.scss';
-// Components
 
 function Home() {
   const [search, setSearch] = useState('');
@@ -42,13 +41,6 @@ function Home() {
             {movies &&
               movies.map((movie) => (
                 <MovieCard key={movie.imdbID} movie={movie} />
-                /*<div key={movie.imdbID}>
-              <div className="card-image">
-                <img src={movie.Poster} alt={movie.Title} />
-              </div>
-              <div>{movie.Title}</div>
-              <p>Year : {movie.Year}</p>
-            </div>*/
               ))}
           </div>
         </div>

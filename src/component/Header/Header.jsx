@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 import Badge from '@mui/material/Badge';
 import { useSelector } from 'react-redux';
-import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
+import PostAddIcon from '@mui/icons-material/PostAdd';
 
 function Header() {
   const cart = useSelector((state) => state.cart.list);
@@ -17,7 +17,7 @@ function Header() {
           <Link to="/cart">
             <Badge className="badge" badgeContent={cart.length} color="primary">
               <div>My list</div>
-              <LibraryAddIcon />
+              <PostAddIcon style={{ fontSize: '35px' }} />
             </Badge>
           </Link>
         </div>

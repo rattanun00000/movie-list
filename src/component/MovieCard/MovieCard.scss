@@ -7,12 +7,20 @@
   .card-content {
     color: white;
     margin-top: 5px;
+    .card-title {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
   }
 }
 
 .card-image img {
   width: 100%;
-  max-height: 270px;
+  height: 245px;
+  object-fit: cover;
 }
 .button {
   display: flex;
